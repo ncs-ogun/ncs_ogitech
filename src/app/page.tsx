@@ -6,7 +6,7 @@ import FeaturesSection from "@/components/Features";
 import FinancialControlSection from "@/components/FinancialControl";
 import CTASection from "@/components/CTA";
 import Footer from "@/components/Footer";
-export const page = () => {
+export default function Main() {
   return (
     <div>
       <Home />
@@ -15,6 +15,4 @@ export const page = () => {
       <CTASection />
     </div>
   );
-};
-
-export default page;
+}
