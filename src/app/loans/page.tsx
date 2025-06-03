@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Clock, Zap, Briefcase, User, Users } from "lucide-react";
+import Link from "next/link";
+import link  from "next/link"
 
 export default function LoansPage() {
   const loanTypes = [
@@ -117,9 +119,9 @@ export default function LoansPage() {
               business, or fund a community project, we have the right loan for
               you.
             </p>
-            <Button variant="secondary" size="lg">
+            <Link href="http://127.0.0.1:5000"  target="_blank">   <Button variant="secondary" size="lg">
               Check Your Eligibility
-            </Button>
+            </Button></Link>
           </div>
         </div>
       </section>
