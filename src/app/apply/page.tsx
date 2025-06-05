@@ -181,7 +181,7 @@ export default function LoanApplicationPage() {
               </div>
               <div>
                 <p className="text-sm text-gray-600">Monthly Payment</p>
-                <p className="text-lg font-semibold">${calculateMonthlyPayment().toLocaleString()}</p>
+                <p className="text-lg font-semibold">₦{calculateMonthlyPayment().toLocaleString()}</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Interest Rate</p>
@@ -290,7 +290,7 @@ export default function LoanApplicationPage() {
                   >
                     Create Account
                   </Button>
-                  <Button variant="outline" onClick={() => router.push("/")} className="w-full">
+                  <Button variant="outline" onClick={() => router.push("/login")} className="w-full">
                     Sign In
                   </Button>
                 </div>
@@ -415,10 +415,10 @@ export default function LoanApplicationPage() {
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold mb-2">Loan Details</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                    <div>Amount: ${Number.parseFloat(applicationData.loanAmount || "0").toLocaleString()}</div>
+                    <div>Amount: ₦{Number.parseFloat(applicationData.loanAmount || "0").toLocaleString()}</div>
                     <div>Purpose: {applicationData.loanPurpose}</div>
                     <div>Term: {applicationData.loanTerm} months</div>
-                    <div>Est. Monthly Payment: ${calculateMonthlyPayment().toLocaleString()}</div>
+                    <div>Est. Monthly Payment: ₦{calculateMonthlyPayment().toLocaleString()}</div>
                   </div>
                 </div>
 
@@ -426,12 +426,12 @@ export default function LoanApplicationPage() {
                   <h4 className="font-semibold mb-2">Financial Information</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                     <div>
-                      Monthly Income: ${Number.parseFloat(applicationData.monthlyIncome || "0").toLocaleString()}
+                      Monthly Income: ₦{Number.parseFloat(applicationData.monthlyIncome || "0").toLocaleString()}
                     </div>
                     <div>Employment: {applicationData.employmentLength}</div>
                     <div>Credit Score: {applicationData.creditScore}</div>
                     <div>
-                      Existing Debts: ${Number.parseFloat(applicationData.existingDebts || "0").toLocaleString()}
+                      Existing Debts: ₦{Number.parseFloat(applicationData.existingDebts || "0").toLocaleString()}
                     </div>
                   </div>
                 </div>

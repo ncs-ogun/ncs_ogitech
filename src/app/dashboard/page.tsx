@@ -77,7 +77,7 @@ export default function Dashboard() {
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$45,231.89</div>
+              <div className="text-2xl font-bold">₦45,231.89</div>
               <p className="text-xs text-muted-foreground">+20.1% from last month</p>
             </CardContent>
           </Card>
@@ -87,7 +87,7 @@ export default function Dashboard() {
               <CreditCard className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$1,234.56</div>
+              <div className="text-2xl font-bold">₦1,234.56</div>
               <p className="text-xs text-muted-foreground">Due on 15th of each month</p>
             </CardContent>
           </Card>
@@ -131,7 +131,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-semibold">$25,000</p>
+                  <p className="font-semibold">₦25,000</p>
                   <Badge variant="secondary">Active</Badge>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-semibold">$20,231.89</p>
+                  <p className="font-semibold">₦20,231.89</p>
                   <Badge variant="secondary">Active</Badge>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function Dashboard() {
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm font-medium">Payment Received</p>
-                  <p className="text-xs text-gray-500">$1,234.56 - Dec 15, 2024</p>
+                  <p className="text-xs text-gray-500">₦1,234.56 - Dec 15, 2024</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
