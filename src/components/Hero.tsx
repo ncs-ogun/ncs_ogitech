@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
               size="lg"
               className="text-lg bg-primary hover:bg-primary/90"
             >
+              <Link href="/signup">
               Create your Account
+              </Link>
             </Button>
             <p className="text-sm text-gray-600">
               Grow as high as you need from ₦5,000 upwards

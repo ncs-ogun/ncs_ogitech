@@ -4,6 +4,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { useState, useEffect } from "react"
+
+interface User {
+  email: string
+  name: string
+  firstName?: string
+  lastName?: string
+  phone?: string
+}
 
 export function Navbar() {
   const menuItems = [
@@ -11,9 +20,14 @@ export function Navbar() {
     { label: "About", href: "/about" },
     { label: "Careers", href: "/careers" },
     { label: "Help", href: "/help" },
-    { label: "Blog", href: "/blog" },
-    { label: "FAQs", href: "/faqs" },
   ];
+    const [user, setUser] = useState<User | null>(null)
+useEffect(() => {
+    const userData = localStorage.getItem("user")
+    if (userData) {
+      setUser(JSON.parse(userData))
+    }
+  }, [])
 
   return (
     <nav className="border-b bg-white">
@@ -37,13 +51,24 @@ export function Navbar() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button
+          { !user &&   <Button
             variant="ghost"
             className="text-primary hover:text-primary hover:bg-blue-50"
           >
+            <Link href="/login">
             Login
-          </Button>
-          <Button className="bg-primary hover:bg-primary/90">Apply Now</Button>
+            </Link>
+          </Button>}
+           { user &&   <Button
+            variant="ghost"
+            className="text-primary hover:text-primary hover:bg-blue-50"
+          >
+            <Link href="/dashboard">
+            Dashboard
+            </Link>
+          </Button>}
+         
+          <Button className="bg-primary hover:bg-primary/90"><Link href="/apply">Apply Now </Link></Button>
         </div>
 
         {/* Mobile Menu */}
@@ -66,7 +91,9 @@ export function Navbar() {
               ))}
               <hr className="my-4" />
               <Button className="w-full" variant="outline">
+                <Link href="/login">
                 Login
+                </Link>
               </Button>
               <Button className="w-full bg-primary hover:bg-primary/90">
                 Apply Now
